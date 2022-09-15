@@ -4,6 +4,8 @@ body {
     
     background-color: white;
     opacity: 0;
+    
+    overflow-x: hidden;
 }
 
 body .section {
@@ -54,7 +56,6 @@ body .section {
     flex-direction: column;
     
     width: 50%;
-    opacity: 1;
 }
 
 #my-info #description #name {
@@ -120,8 +121,6 @@ body .section {
     
     width: 50vw;
     height: 80vh;
-    
-    opacity: 1;
 }
 
 #photo-wrapper img {
@@ -252,29 +251,29 @@ body .section {
     height: 100%;
 }
 
-#skills .section-content img {
+#skills .section-content > img {
     position: relative;
     
     width: auto;
     height: 40%;
     
-    opacity: 1;
+    opacity: 0;
 }
 
-#skills .section-content div {
+#skills .section-content > div {
     position: relative;
     width: 70%;
     min-height: 40%;
     
-    opacity: 1;
+    opacity: 0;
 }
 
-#skills .section-content div p {
+#skills .section-content > div p {
     font-size: 0.5rem;
     word-wrap: break-word;
 }
 
-#skills .section-content div ul {
+#skills .section-content > div ul {
     font-size: 0.6rem;
     
     min-height: 100%;
@@ -283,7 +282,7 @@ body .section {
     background: orange;
 }
 
-#skills .section-content div ul li {
+#skills .section-content > div ul li {
     display: flex;
     align-items: center;
     
@@ -295,14 +294,14 @@ body .section {
     margin-bottom: 0.2rem;
 }
 
-#skills .section-content div ul li img {
+#skills .section-content > div ul li img {
     width: 1.5rem;
     height: 1.5rem;
     
     margin-right: 1rem;
 }
 
-#skills .section-content div ul li p {
+#skills .section-content > div ul li p {
     width: 60%;
 }
 

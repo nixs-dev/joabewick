@@ -12,8 +12,8 @@ document.addEventListener("scroll", function () {
     
     
     if (clientHeight > skillsPos + (skillsHeight * 2/3)) {
-        skillsSection.querySelector("img").style.animation = "showInfoFromLeft 2s forwards";
-        skillsSection.querySelector("div").style.animation = "showInfoFromRight 2s forwards";
+        skillsSection.querySelector(".section-content > img").style.animation = "showInfoFromLeft 2s forwards";
+        skillsSection.querySelector(".section-content > div").style.animation = "showInfoFromRight 2s forwards";
     }
 });
 

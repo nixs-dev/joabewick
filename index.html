@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Joabe Wick</title>
+        <link rel="stylesheet" href="/public/css/fonts.css">
+        <link rel="stylesheet" href="/public/css/buttons.css">
+        <link rel="stylesheet" href="/public/css/index.css">
+    </head>
+    <body>
+        <div id="my-info">
+            <div id="description">
+                <label id="name">Joabe Wick</label>
+                <p id="resume">
+                    Hi 👋! I'm Joabe, 19 years old guy who loves IT. I've been improving my web development skills to become a great Full-stack developer.
+                </p>
+                <a id="get-started" class="stone-button" href="#nav">Let's get started</a>
+            </div>
+            <div id="photo-wrapper">
+                <img src="/public/img/me.png">
+            </div>
+            <div id="social-networks">
+                <button class="social-network linkedin-network"></button>
+                <button class="social-network github-network"></button>
+                <button class="social-network instagram-network"></button>
+            </div>
+        </div>
+        <div id="about-me" class="section">
+            <div class="section-title">
+                A bit about me
+            </div>
+            <div class="section-content">
+                <div id="my-pictures-grid">
+                    <div id="aux-pics">
+                        <div class="grid-item">
+                        </div>
+                        <div class="grid-item-empty">
+                        </div>
+                        <div class="grid-item-empty">
+                        </div>
+                        <div class="grid-item">
+                        </div>
+                    </div>
+                    <img src="/public/img/picture-grid-main.jpg">
+                </div>
+                <div id="info">
+                    <div id="my-bio">
+                        <p>
+                            I'm brazilian from MG. I've trained as a computer technician, but even before I finished the course I had loved programming and the computers functioning.
+                        </p>
+                        <p>
+                            Even though I usually code most of the time, I'm interested in subjects like internet and general computer networks.
+                        </p>
+                        <p>
+                            Actually I'm looking for my first job working with IT. That's the reason I have many cool personal projects. <a href="#projects">Check them out</a>.
+                        </p>
+                        <p>
+                            I'm an introvert person, but I don't have any problem in talking in professional situations. I try hard make a good impression and a good communication in trivial situations.
+                        </p>
+                    </div>
+                    <div id="esthetics-images">
+                        <img id="flowers" src="/public/img/about_me_side_image.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="skills">
+            <div class="section-title">
+                Skills
+            </div>
+            <div class="section-content">
+                <img src="/public/img/skills_section.png">
+                <div>
+                    <ul>
+                        <li>
+                            <img src="/public/img/network_skill.png">
+                            <p>Networks knowledge</p>
+                        </li>
+                        <li>
+                            <img src="/public/img/hardware_skill.png">
+                             <p>Hardware components exchange and fixes</p>
+                        </li>
+                        <li>
+                            <img src="/public/img/browser_skill.png">
+                            <p>Front-end development: HTML, CSS and Javascript</p>
+                        </li>
+                        <li>
+                            <img src="/public/img/server_skill.png">
+                            <p>Back-end development: PHP and Python</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="languages" class="section">
+            <div class="section-title">
+                Languages
+            </div>
+            <div class="section-content">
+                <div id="section-image">
+                </div>
+                <div id="languages-info">
+                    <div id="languages-repr">
+                        <div class="language-orbit">
+                            <img class="orbit-1" src="/public/img/js_coin.png">
+                        </div>
+                        <div class="language-orbit reverse">
+                            <img class="orbit-2" src="/public/img/js_coin.png">
+                        </div>
+                        <div class="language-orbit">
+                            <img class="orbit-3" src="/public/img/js_coin.png">
+                        </div>
+                        <img class="languages-core" src="/public/img/coins_core.png">
+                    </div>
+                    <div id="language-description">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <div id="projects-list">
+                <template id="project-template">
+                    <div class="project">
+                        <div class="project-logo">
+                            <img class="project-logo" src="/public/img/not_set_project.jpg">
+                            
+                            <div class="project-info-link">
+                                <button onclick="showProjectInfo(this.parentNode.id)">See more</button>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div id="project-details">
+                <div id="visual-info">
+                    <img id="logo" src="/public/img/not_set_project.jpg">
+                </div>
+                <div id="other-info">
+                    <div id="basic-info">
+                        <label id="project-title">Project</label>
+                        <p id="project-description">
+                            shjsjsjsjsjs
+                        </p>
+                        <a id="project-source" href="a">SOURCE</a>
+                        <div id="project-stacks">
+                            <label>stack</label>
+                            <label>stack</label>
+                        </div>
+                    </div>
+                    <div id="project-screenshots">
+                        <img src="/public/img/not_set_project.jpg">
+                        <img src="/public/img/not_set_project.jpg">
+                        <img src="/public/img/not_set_project.jpg">
+                        <img src="/public/img/not_set_project.jpg">
+                    </div>
+                </div>
+                <a id="close" onclick="hideProjectInfo()">X</a>
+            </div>
+        </div>
+        <footer>
+            <img id="top-img" src="/public/img/footer_pegasus.png">
+            <img id="right-bottom-img" src="/public/img/footer_woman.png">
+            <img id="left-bottom-img" src="/public/img/footer_go_top.png" onclick="window.scrollTo(0, 0);">
+            <img id="bottom-img" src="/public/img/footer_grass.png">
+        
+            <div id="footer-content">
+                <div class="content-data">
+                    <label>Updated on</label>
+                    <p>12:00 12/12/2012</p>
+                </div>
+                <div class="content-data">
+                    <label>Source code</label>
+                    <a href="#">here</a>
+                </div>
+                <div class="content-data">
+                    <label>Resources credits</label>
+                    <a href="#">show</a>
+                </div>
+            </div>
+        </footer>
+        <script src="/public/js/index.js"></script>
+        <script src="/public/js/services.js"></script>
+    </body>
+</html>

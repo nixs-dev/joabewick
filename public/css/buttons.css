@@ -1,0 +1,16 @@
+.stone-button {
+    border: 0.1rem solid #555555;
+    
+    font-size: 0.1rem;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    
+    background-color: white;
+}
+
+.stone-button:hover {
+    background-color: #555555;
+    
+    color: white;
+}

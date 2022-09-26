@@ -5,15 +5,17 @@
         <link rel="stylesheet" href="/public/css/fonts.css">
         <link rel="stylesheet" href="/public/css/buttons.css">
         <link rel="stylesheet" href="/public/css/index.css">
+        <link rel="stylesheet" href="/public/css/quick_style.css">
+        <script src="https://kit.fontawesome.com/17c066a4d1.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="my-info">
             <div id="description">
-                <label id="name">Joabe Wick</label>
+                <label id="name" class="typing-effect">Joabe Wick</label>
                 <p id="resume">
                     Hi 👋! I'm Joabe, 19 years old guy who loves IT. I've been improving my web development skills to become a great Full-stack developer.
                 </p>
-                <a id="get-started" class="stone-button" href="#nav">Let's get started</a>
+                <button id="get-started" class="stone-button" onclick="toggleMenu()">Let's get started</button>
             </div>
             <div id="photo-wrapper">
                 <img src="/public/img/me.png">
@@ -24,23 +26,15 @@
                 <button class="social-network instagram-network"></button>
             </div>
         </div>
-        <div id="about-me" class="section">
+        <div class="section" id="about-me">
             <div class="section-title">
                 A bit about me
             </div>
             <div class="section-content">
-                <div id="my-pictures-grid">
-                    <div id="aux-pics">
-                        <div class="grid-item">
-                        </div>
-                        <div class="grid-item-empty">
-                        </div>
-                        <div class="grid-item-empty">
-                        </div>
-                        <div class="grid-item">
-                        </div>
+                <div id="my-pictures">
+                    <div id="aux-pic">
                     </div>
-                    <img src="/public/img/picture-grid-main.jpg">
+                    <img src="/public/img/picture_grid_main.jpg">
                 </div>
                 <div id="info">
                     <div id="my-bio">
@@ -51,7 +45,7 @@
                             Even though I usually code most of the time, I'm interested in subjects like internet and general computer networks.
                         </p>
                         <p>
-                            Actually I'm looking for my first job working with IT. That's the reason I have many cool personal projects. <a href="#projects">Check them out</a>.
+                            Actually I'm looking for my first job working with IT. That's the reason I have many cool personal projects. <a href="#" onclick="selectSection('projects', false)">Check them out</a>.
                         </p>
                         <p>
                             I'm an introvert person, but I don't have any problem in talking in professional situations. I try hard make a good impression and a good communication in trivial situations.
@@ -91,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <div id="languages" class="section">
+        <div class="section" id="languages">
             <div class="section-title">
                 Languages
             </div>
@@ -101,34 +95,53 @@
                 <div id="languages-info">
                     <div id="languages-repr">
                         <div class="language-orbit">
-                            <img class="orbit-1" src="/public/img/js_coin.png">
+                            <img class="language-coin orbit-1" id="js" src="/public/img/js_coin.png">
                         </div>
                         <div class="language-orbit reverse">
-                            <img class="orbit-2" src="/public/img/js_coin.png">
+                            <img class="language-coin orbit-2" id="php" src="/public/img/php_coin.png">
                         </div>
                         <div class="language-orbit">
-                            <img class="orbit-3" src="/public/img/js_coin.png">
+                            <img class="language-coin orbit-3" id="python" src="/public/img/python_coin.png">
                         </div>
                         <img class="languages-core" src="/public/img/coins_core.png">
                     </div>
                     <div id="language-description">
+                        <div id="description-title">
+                            
+                        </div>
+                        <div id="description-content">
+                            <div id="experience" class="flex">
+                                <label class="strong-f">Experiência:</label>
+                                <label></label>
+                            </div>
+                            <div id="level" class="flex">
+                                <label class="strong-f">Nível:</label>
+                                <label></label>
+                            </div>
+                            <p id="additional-info"></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="projects">
-            <div id="projects-list">
-                <template id="project-template">
-                    <div class="project">
-                        <div class="project-logo">
-                            <img class="project-logo" src="/public/img/not_set_project.jpg">
-                            
-                            <div class="project-info-link">
-                                <button onclick="showProjectInfo(this.parentNode.id)">See more</button>
+        <div class="section" id="projects">
+            <div class="section-title">
+                Projects
+            </div>
+            <div class="section-content">
+                <div id="projects-list">
+                    <template id="project-template">
+                        <div class="project">
+                            <div class="project-logo">
+                                <img class="project-logo" src="/public/img/not_set_project.jpg">
+                                
+                                <div class="project-info-link">
+                                    <button onclick="showProjectInfo(this.parentNode.id)">See more</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </template>
+                    </template>
+                </div>
             </div>
             <div id="project-details">
                 <div id="visual-info">
@@ -137,10 +150,19 @@
                 <div id="other-info">
                     <div id="basic-info">
                         <label id="project-title">Project</label>
+                        
+                        <label class="info-title">Description</label>
                         <p id="project-description">
-                            shjsjsjsjsjs
+                            shjsjjjjjjhgggghhjjjjhhjjkjvhhhfgghjhg
+                            shjsjjjjjjhgggghhjjjjhhjjkjvhhhfgghjhg
+                            shjsjjjjjjhgggghhjjjjhhjjkjvhhhfgghjhg
+                            shjsjjjjjjhgggghhjjjjhhjjkjvhhhfgghjhg
                         </p>
-                        <a id="project-source" href="a">SOURCE</a>
+                        
+                        <label class="info-title">Source</label>
+                        <a id="project-source" href="a">https://www.google.com</a>
+                        
+                        <label class="info-title">Stacks</label>
                         <div id="project-stacks">
                             <label>stack</label>
                             <label>stack</label>
@@ -153,13 +175,24 @@
                         <img src="/public/img/not_set_project.jpg">
                     </div>
                 </div>
-                <a id="close" onclick="hideProjectInfo()">X</a>
+                <a id="close" onclick="hideProjectInfo()"><i class="fas fa-times"></i></a>
             </div>
         </div>
-        <footer>
-            <img id="top-img" src="/public/img/footer_pegasus.png">
+        <div id="main-menu">
+            <button id="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <ul id="menu-options">
+                <li onclick="selectSection('my-info')">Start</li>
+                <li onclick="selectSection('about-me')">About me</li>
+                <li onclick="selectSection('skills')">Skills</li>
+                <li onclick="selectSection('languages')">Languages</li>
+                <li onclick="selectSection('projects')">Projects</li>
+                <li onclick="selectSection('footer')">End</li>
+            </ul>
+       </div>
+        <footer id="footer">
             <img id="right-bottom-img" src="/public/img/footer_woman.png">
-            <img id="left-bottom-img" src="/public/img/footer_go_top.png" onclick="window.scrollTo(0, 0);">
             <img id="bottom-img" src="/public/img/footer_grass.png">
         
             <div id="footer-content">

@@ -21,16 +21,6 @@ window.onload = function () {
 window.addEventListener('resize', calculateVH);
 window.addEventListener('orientationchange', calculateVH);
 
-document.querySelectorAll(".language-coin").forEach((e) => {
-    e.addEventListener("click", () => {
-        clickCoin(e);
-    });
-    
-    e.addEventListener("animationend", () => {
-        e.classList.toggle("animate");
-    });
-});
-
 document.querySelector("#language-description").addEventListener("animationend", () => {
     document.querySelector("#language-description").classList.toggle("animate");
 });
@@ -77,6 +67,10 @@ function setLanguages(languages) {
         if (languageID % 2 == 0) {
             clone.querySelector("img").parentNode.classList.add("reverse");
         }
+        
+        clone.querySelector("img").addEventListener("animationend", () => {
+            document.querySelector(`.language-coin#${k}`).classList.toggle("animate");
+        });
         
         list.appendChild(clone);
         languagesData[k] = languages[k];

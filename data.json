@@ -3,7 +3,7 @@
         {
             "id": 0,
             "name": "Aline's store",
-            "description": "",
+            "description": "Um e-commerce integrado com a API do PagSeguro. Feito usando PHP com a framework Laravel. O nome é algo genérico pois a aplicação foi apenas para fins de estudo.",
             "source": "https://github.com/nixs-dev/AlinesStore",
             "stacks": ["Laravel", "PHP", "JavaScript", "HTML", "CSS"],
             "logo": "logo.png",
@@ -22,7 +22,7 @@
             "icon": "js_coin.png",
             "experience": "3 anos",
             "level": "Intermediário",
-            "additional": "Tenho facilidade de lidar com JavaScript no ambiente do cliente."
+            "additional": "Tenho facilidade de lidar com JavaScript no ambiente do cliente. Sei trabalhar com AngularJS também, apesar de ter utilizado poucas vezes."
         },
         "php": {
             "name": "PHP",
@@ -36,7 +36,7 @@
             "icon": "python_coin.png",
             "experience": "4 anos",
             "level": "Intermediário",
-            "additional": "Python é a linguagem que eu mais tive e ainda tenho contato. Ja fiz diversos tipos de aplicações utilizando essa linguagem. Devido a isso, considero ser essa a linguagem que eu mais tenho conhecimento a respeito."
+            "additional": "Python é a linguagem que eu mais tive e ainda tenho contato. Ja fiz diversos tipos de aplicações utilizando essa linguagem. Devido a isso, considero ser essa a linguagem que eu mais tenho conhecimento a respeito. Desde desenvolvimento web e desktop, até mobile usando kivy."
         }
     }
 }

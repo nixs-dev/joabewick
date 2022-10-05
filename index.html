@@ -2,10 +2,10 @@
 <html>
     <head>
         <title>Joabe Wick</title>
-        <link rel="stylesheet" href="/public/css/fonts.css">
-        <link rel="stylesheet" href="/public/css/buttons.css">
-        <link rel="stylesheet" href="/public/css/index.css">
-        <link rel="stylesheet" href="/public/css/quick_style.css">
+        <meta name="viewport" content="initial-scale=1">
+        <link rel="stylesheet" href="/css/buttons.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/quick_style.css">
         <script src="https://kit.fontawesome.com/17c066a4d1.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -13,73 +13,64 @@
             <div id="description">
                 <label id="name" class="typing-effect">Joabe Wick</label>
                 <p id="resume">
-                    Hi 👋! I'm Joabe, 19 years old guy who loves IT. I've been improving my web development skills to become a great Full-stack developer.
+                    Olá! Me chamo Joabe Wick, formado como técnico em informática e em busca de se tornar um desenvolvedor FullStack.
                 </p>
-                <button id="get-started" class="stone-button" onclick="toggleMenu()">Let's get started</button>
+                <button id="get-started" class="stone-button" onclick="toggleMenu()">Navegar</button>
             </div>
             <div id="photo-wrapper">
-                <img src="/public/img/me.png">
+                <img src="/img/me.png">
             </div>
             <div id="social-networks">
-                <button class="social-network linkedin-network"></button>
-                <button class="social-network github-network"></button>
-                <button class="social-network instagram-network"></button>
+                <button class="social-network linkedin-network" onclick="window.location = 'https://www.linkedin.com/in/joabe-wick-897a9420b'"></button>
+                <button class="social-network github-network" onclick="window.location = 'https://github.com/nixs-dev/joabewick'"></button>
+                <button class="social-network instagram-network" onclick="window.location = 'https://www.instagram.com/joabewwick/'"></button>
             </div>
         </div>
         <div class="section" id="about-me">
             <div class="section-title">
-                A bit about me
+                Sobre mim
             </div>
             <div class="section-content">
-                <div id="my-pictures">
-                    <div id="aux-pic">
-                    </div>
-                    <img src="/public/img/picture_grid_main.jpg">
+                <div id="my-picture">
                 </div>
                 <div id="info">
                     <div id="my-bio">
                         <p>
-                            I'm brazilian from MG. I've trained as a computer technician, but even before I finished the course I had loved programming and the computers functioning.
+                            Me chamo Joabe e tenho 19 anos. Sou formado como técnico em informática e atualmente permaneço estudando sobre desenvolvimento web e outros. Tenho feito diversos tipos de aplicações com o intuito de melhorar minhas habilidades como desenvolvedor e então conseguir minha primeira vaga como Desenvolvedor Júnior.
                         </p>
                         <p>
-                            Even though I usually code most of the time, I'm interested in subjects like internet and general computer networks.
-                        </p>
-                        <p>
-                            Actually I'm looking for my first job working with IT. That's the reason I have many cool personal projects. <a href="#" onclick="selectSection('projects', false)">Check them out</a>.
-                        </p>
-                        <p>
-                            I'm an introvert person, but I don't have any problem in talking in professional situations. I try hard make a good impression and a good communication in trivial situations.
+                            Além de desenvolvimento, sou interessado na área de redes de computadores. É algo que venho estudando há um longo período de tempo.
                         </p>
                     </div>
                     <div id="esthetics-images">
-                        <img id="flowers" src="/public/img/about_me_side_image.png">
+                        <img id="flowers" src="/img/about_me_side_image.png">
                     </div>
                 </div>
             </div>
         </div>
         <div class="section" id="skills">
             <div class="section-title">
-                Skills
+                Habilidades
             </div>
             <div class="section-content">
-                <img src="/public/img/skills_section.png">
+                <img src="/img/skills_section.png">
                 <div>
                     <ul>
                         <li>
-                            <img src="/public/img/network_skill.png">
-                            <p>Networks knowledge</p>
+                            <img src="/img/network_skill.png">
+                            <p>Conhecimento de redes de computadores</p>
                         </li>
                         <li>
-                            <img src="/public/img/hardware_skill.png">
-                             <p>Hardware components exchange and fixes</p>
+                            <img src="/img/hardware_skill.png">
+                             <p>Reparo de sistemas e troca de hardware</p>
                         </li>
                         <li>
-                            <img src="/public/img/browser_skill.png">
-                            <p>Front-end development: HTML, CSS and Javascript</p>
+                            <img src="/img/web_skill.png">
+                            <p>Desenvolvimento web</p>
                         </li>
                         <li>
-                            <img src="/public/img/server_skill.png">
-                            <p>Back-end development: PHP and Python</p>
+                            <img src="/img/desktop_skill.png">
+                            <p>Desenvolvimento desktop</p>
                         </li>
                     </ul>
                 </div>
@@ -87,23 +78,19 @@
         </div>
         <div class="section" id="languages">
             <div class="section-title">
-                Languages
+                Linguagens
             </div>
             <div class="section-content">
                 <div id="section-image">
                 </div>
                 <div id="languages-info">
                     <div id="languages-repr">
-                        <div class="language-orbit">
-                            <img class="language-coin orbit-1" id="js" src="/public/img/js_coin.png">
-                        </div>
-                        <div class="language-orbit reverse">
-                            <img class="language-coin orbit-2" id="php" src="/public/img/php_coin.png">
-                        </div>
-                        <div class="language-orbit">
-                            <img class="language-coin orbit-3" id="python" src="/public/img/python_coin.png">
-                        </div>
-                        <img class="languages-core" src="/public/img/coins_core.png">
+                        <template id="language-coin-template">
+                            <div class="language-orbit">
+                                <img class="language-coin" src="" onclick="clickCoin(this)">
+                            </div>
+                        </template>
+                        <img class="languages-core" src="/img/coins_core.png">
                     </div>
                     <div id="language-description">
                         <div id="description-title">
@@ -126,17 +113,17 @@
         </div>
         <div class="section" id="projects">
             <div class="section-title">
-                Projects
+                Projetos
             </div>
             <div class="section-content">
                 <div id="projects-list">
                     <template id="project-template">
                         <div class="project">
                             <div class="project-logo">
-                                <img class="project-logo" src="/public/img/not_set_project.jpg">
+                                <img src="/img/not_set_project.jpg">
                                 
                                 <div class="project-info-link">
-                                    <button onclick="showProjectInfo(this.parentNode.id)">See more</button>
+                                    <button onclick="showProjectInfo(this.parentNode.id)">Ver mais</button>
                                 </div>
                             </div>
                         </div>
@@ -145,34 +132,24 @@
             </div>
             <div id="project-details">
                 <div id="visual-info">
-                    <img id="logo" src="/public/img/not_set_project.jpg">
+                    <img id="logo" src="/img/not_set_project.jpg">
                 </div>
                 <div id="other-info">
                     <div id="basic-info">
-                        <label id="project-title">Project</label>
+                        <label id="project-title"></label>
                         
-                        <label class="info-title">Description</label>
+                        <label class="info-title">Descrição</label>
                         <p id="project-description">
-                            shjsjjjjjjhgggghhjjjjhhjjkjvhhhfgghjhg
-                            shjsjjjjjjhgggghhjjjjhhjjkjvhhhfgghjhg
-                            shjsjjjjjjhgggghhjjjjhhjjkjvhhhfgghjhg
-                            shjsjjjjjjhgggghhjjjjhhjjkjvhhhfgghjhg
                         </p>
                         
-                        <label class="info-title">Source</label>
-                        <a id="project-source" href="a">https://www.google.com</a>
+                        <label class="info-title">Código fonte</label>
+                        <a id="project-source" href=""></a>
                         
                         <label class="info-title">Stacks</label>
                         <div id="project-stacks">
-                            <label>stack</label>
-                            <label>stack</label>
                         </div>
                     </div>
                     <div id="project-screenshots">
-                        <img src="/public/img/not_set_project.jpg">
-                        <img src="/public/img/not_set_project.jpg">
-                        <img src="/public/img/not_set_project.jpg">
-                        <img src="/public/img/not_set_project.jpg">
                     </div>
                 </div>
                 <a id="close" onclick="hideProjectInfo()"><i class="fas fa-times"></i></a>
@@ -183,34 +160,37 @@
                 <i class="fas fa-arrow-left"></i>
             </button>
             <ul id="menu-options">
-                <li onclick="selectSection('my-info')">Start</li>
-                <li onclick="selectSection('about-me')">About me</li>
-                <li onclick="selectSection('skills')">Skills</li>
-                <li onclick="selectSection('languages')">Languages</li>
-                <li onclick="selectSection('projects')">Projects</li>
-                <li onclick="selectSection('footer')">End</li>
+                <li onclick="selectSection('my-info')">Início</li>
+                <li onclick="selectSection('about-me')">Sobre mim</li>
+                <li onclick="selectSection('skills')">Habilidades</li>
+                <li onclick="selectSection('languages')">Linguagens</li>
+                <li onclick="selectSection('projects')">Projetos</li>
+                <li onclick="selectSection('footer')">Fim</li>
             </ul>
        </div>
         <footer id="footer">
-            <img id="right-bottom-img" src="/public/img/footer_woman.png">
-            <img id="bottom-img" src="/public/img/footer_grass.png">
-        
             <div id="footer-content">
                 <div class="content-data">
-                    <label>Updated on</label>
-                    <p>12:00 12/12/2012</p>
+                    <label>Atualizado em</label>
+                    <p>06/10/2022</p>
                 </div>
                 <div class="content-data">
-                    <label>Source code</label>
-                    <a href="#">here</a>
+                    <label>Créditos</label>
+                    <a class="link" href="/credits.html">Abrir</a>
                 </div>
                 <div class="content-data">
-                    <label>Resources credits</label>
-                    <a href="#">show</a>
+                    <label>Voltar ao topo</label>
+                    <a class="link" href="#" onclick="selectSection('my-info', false)">Ir</a>
                 </div>
+                
+                <img src="/img/footer_content_decoration.png">
+            </div>
+            
+            <div id="copyright">
+                Desenvolvido por nixs-dev. 2022.
             </div>
         </footer>
-        <script src="/public/js/index.js"></script>
-        <script src="/public/js/services.js"></script>
+        <script src="/js/index.js"></script>
+        <script src="/js/services.js"></script>
     </body>
 </html>

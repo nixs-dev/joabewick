@@ -1,7 +1,42 @@
 {
     "projects": [
         {
-            "name": "Oi"
+            "id": 0,
+            "name": "Aline's store",
+            "description": "",
+            "source": "https://github.com/nixs-dev/AlinesStore",
+            "stacks": ["Laravel", "PHP", "JavaScript", "HTML", "CSS"],
+            "logo": "logo.png",
+            "screenshots": [
+                "1.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg",
+                "5.jpg"
+            ]
         }
-    ]
+    ],
+    "languages": {
+        "js": {
+            "name": "JavaScript",
+            "icon": "js_coin.png",
+            "experience": "3 anos",
+            "level": "Intermediário",
+            "additional": "Tenho facilidade de lidar com JavaScript no ambiente do cliente."
+        },
+        "php": {
+            "name": "PHP",
+            "icon": "php_coin.png",
+            "experience": "2 anos",
+            "level": "Intermediário",
+            "additional": "Tenho vários projetos utilizando php no meu GitHub. Essa é uma das linguagens que eu considero ter mais afinidade. Apesar do tempo de utilização. Gosto bastante de usar ela quando opto por não usar a linguagem python."
+        },
+        "python": {
+            "name": "Python",
+            "icon": "python_coin.png",
+            "experience": "4 anos",
+            "level": "Intermediário",
+            "additional": "Python é a linguagem que eu mais tive e ainda tenho contato. Ja fiz diversos tipos de aplicações utilizando essa linguagem. Devido a isso, considero ser essa a linguagem que eu mais tenho conhecimento a respeito."
+        }
+    }
 }

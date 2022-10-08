@@ -162,6 +162,7 @@ body .section {
 #about-me #my-picture {
     width: 50%;
     height: auto;
+    max-height: 100%;
 }
 
 #about-me #info {

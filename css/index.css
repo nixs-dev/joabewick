@@ -156,16 +156,12 @@ body .section {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 #about-me #my-picture {
-    background-image: url("/img/about_me_picture.jpg");
-    background-size: auto 100%;
-    background-position: right center;
-    background-repeat: no-repeat;
-    
-    width: 60%;
-    height: 100%;
+    width: 50%;
+    height: auto;
 }
 
 #about-me #info {

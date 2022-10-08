@@ -752,11 +752,11 @@ footer #footer-content .content-data:hover {
 
 footer #footer-content > img {
     position: absolute;
-    bottom: -1rem;
-    right: -1rem;
+    bottom: 0;
+    right: 0;
     
-    width: 50%;
-    height: auto;
+    width: auto;
+    height: 30%;
 }
 
 footer #copyright {
@@ -884,5 +884,19 @@ footer #copyright {
     
     html {
         font-size: 40px;
+    }
+    
+    #projects-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        
+        height: 100%;
+        width: 50%;
+        
+        background-color: white;
+        border: 0.3rem solid #DDDDDD;
     }
 }

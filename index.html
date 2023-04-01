@@ -6,7 +6,7 @@
         <!-- HTML Meta Tags -->
         <title>Joabe Wick</title>
         <meta name="description" content="Olá! Me chamo Joabe Wick, formado como técnico em informática e em busca de me tornar um desenvolvedor FullStack.">
-        
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://joabewick.pages.dev/">
         <meta property="og:type" content="website">
@@ -24,6 +24,7 @@
         
         <!-- Meta Tags Generated via https://www.opengraph.xyz -->
         
+        <link rel="icon" type="image/png" href="/img/favicon.ico"/>
         <link rel="stylesheet" href="/css/buttons.css">
         <link rel="stylesheet" href="/css/index.css">
         <link rel="stylesheet" href="/css/quick_style.css">
@@ -34,7 +35,7 @@
             <div id="description">
                 <label id="name" class="typing-effect">Joabe Wick</label>
                 <p id="resume">
-                    Olá! Me chamo Joabe Wick, formado como técnico em informática e em busca de me tornar um desenvolvedor FullStack.
+                    Olá! Me chamo Joabe Wick, apenas um estudante de programação com objetivo de se tornar um bom Desenvolvedor FullStack.
                 </p>
                 <button id="get-started" class="stone-button" onclick="toggleMenu()">Navegar</button>
             </div>
@@ -52,18 +53,13 @@
                 Sobre mim
             </div>
             <div class="section-content">
-                <img id="my-picture" src="/img/about_me_picture.jpg">
                 <div id="info">
                     <div id="my-bio">
                         <p>
-                            Me chamo Joabe e tenho 19 anos. Sou formado como técnico em informática e atualmente permaneço estudando sobre desenvolvimento web e outros. Tenho feito diversos tipos de aplicações com o intuito de melhorar minhas habilidades como desenvolvedor e então conseguir minha primeira vaga como Desenvolvedor Júnior.
+                            Me chamo Joabe e tenho 19 anos. Sou formado como técnico em informática e atualmente permaneço estudando sobre desenvolvimento web com o intuito de me aprimorar.
+                            Tenho trabalhado bastante em projetos pessoais com a intenção de me desenvolver cada vez mais, tanto no Backend como Frontend. Ao longo desse website vocês poderão ver
+                            minhas habilidades em destaque e meus melhores projetos até o momento.
                         </p>
-                        <p>
-                            Além de desenvolvimento, sou interessado na área de redes de computadores. É algo que venho estudando há um longo período de tempo.
-                        </p>
-                    </div>
-                    <div id="esthetics-images">
-                        <img id="flowers" src="/img/about_me_side_image.png">
                     </div>
                 </div>
             </div>
@@ -73,26 +69,31 @@
                 Habilidades
             </div>
             <div class="section-content">
-                <img src="/img/skills_section.png">
-                <div>
-                    <ul>
-                        <li>
-                            <img src="/img/network_skill.png">
-                            <p>Conhecimento de redes de computadores</p>
-                        </li>
-                        <li>
-                            <img src="/img/hardware_skill.png">
-                             <p>Reparo de sistemas e troca de hardware</p>
-                        </li>
-                        <li>
-                            <img src="/img/web_skill.png">
-                            <p>Desenvolvimento web</p>
-                        </li>
-                        <li>
-                            <img src="/img/desktop_skill.png">
-                            <p>Desenvolvimento desktop</p>
-                        </li>
-                    </ul>
+                <div id="skills-grid">
+                    <div class="skill">
+                        <i class="fa-solid fa-cube"></i>
+                        <label>Programção orientada a objetos</label>
+                    </div>
+                    <div class="skill">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <label>Programação orientada a testes</label>
+                    </div>
+                    <div class="skill">
+                        <i class="fa-solid fa-database"></i>
+                        <label>DML SQL</label>
+                    </div>
+                    <div class="skill">
+                        <i class="fa-brands fa-github"></i>
+                        <label>Git</label>
+                    </div>
+                    <div class="skill">
+                        <i class="fa-solid fa-folder-tree"></i>
+                        <label>Estrutura de dados</label>
+                    </div>
+                    <div class="skill">
+                        <i class="fa-solid fa-globe"></i>
+                        <label>Desenvolvimento Web</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,39 +102,18 @@
                 Linguagens
             </div>
             <div class="section-content">
-                <div id="section-image">
-                </div>
-                <div id="languages-info">
-                    <div id="languages-repr">
-                        <template id="language-coin-template">
-                            <div class="language-orbit">
-                                <img class="language-coin" src="" onclick="clickCoin(this)">
-                            </div>
-                        </template>
-                        <img class="languages-core" src="/img/coins_core.png">
-                    </div>
-                    <div id="language-description">
-                        <div id="description-title">
-                            
+                <div id="stacks-list">
+                    <template id="stack-template">
+                        <div class="stack">
+                            <p class="stack-info"></p>
                         </div>
-                        <div id="description-content">
-                            <div id="experience" class="flex">
-                                <label class="strong-f">Experiência:</label>
-                                <label></label>
-                            </div>
-                            <div id="level" class="flex">
-                                <label class="strong-f">Nível:</label>
-                                <label></label>
-                            </div>
-                            <p id="additional-info"></p>
-                        </div>
-                    </div>
+                    </template>
                 </div>
             </div>
         </div>
         <div class="section" id="projects">
             <div class="section-title">
-                Projetos
+                <label>Projetos</label>
             </div>
             <div class="section-content">
                 <div id="projects-list">
@@ -190,24 +170,20 @@
        </div>
         <footer id="footer">
             <div id="footer-content">
-                <div class="content-data">
-                    <label>Atualizado em</label>
-                    <p>05/10/2022</p>
-                </div>
-                <div class="content-data">
-                    <label>Créditos</label>
-                    <a class="link" href="/credits.html">Abrir</a>
-                </div>
-                <div class="content-data">
-                    <label>Voltar ao topo</label>
-                    <a class="link" href="#" onclick="selectSection('my-info', false)">Ir</a>
-                </div>
-                
-                <img src="/img/footer_content_decoration.png">
+                <img src="/img/footer_decoration.gif"/>
+                <p>
+                    Agradeço a visita!
+                    Peço que acessem meu github para conhecer outros dos meus projetos.
+                    Vocês também pode estar entrando em contato comigo através das redes apresentadas no inicio.
+                </p>
+
+                <a href="#" onclick="selectSection('my-info', false)">Vamos de novo ?</a>
             </div>
             
             <div id="copyright">
-                Desenvolvido por nixs-dev. 2022.
+                <a id="credits" href="/credits.html">Créditos aos autores dos recursos</a>
+
+                <label>&copy; nixs-dev 2022</label>
             </div>
         </footer>
         <script src="/js/index.js"></script>

@@ -1,6 +1,10 @@
 @import url("/css/fonts.css");
 
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -10,7 +14,7 @@ body {
     width: 100%;
     height: 100%;
     
-    background: black;
+    background: #0d0d0d;
 }
 
 h1 {
@@ -20,10 +24,9 @@ h1 {
 
 #resources {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
-    column-gap: 0.2rem;
-    row-gap: 0.2rem;
+    gap: 0.5rem;
     
     width: 90%;
     height: 90%;
@@ -37,8 +40,8 @@ h1 {
     align-items: center;
     justify-content: center;
     
-    width: calc(100% - 0.2rem);
-    height: calc(100% - 0.2rem);
+    width: 80%;
+    aspect-ratio: 1/1;
     
     background: white;
     
@@ -71,8 +74,8 @@ h1 {
     font-size: 0.4rem;
     
     text-decoration: underline;
-    text-decoration-color: orange;
-	-webkit-text-decoration-color: orange;
+    text-decoration-color: #66c2ff;
+	-webkit-text-decoration-color: #66c2ff;
 }
 
 .resource .inner a:hover {
@@ -82,6 +85,11 @@ h1 {
 @media only screen and (max-width: 768px) {
     html {
         font-size: 20px;
+    }
+
+    #resources {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 

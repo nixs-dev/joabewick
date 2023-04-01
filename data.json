@@ -5,7 +5,7 @@
             "name": "Aline's store",
             "description": "Um e-commerce integrado com a API do PagSeguro. Feito usando PHP com a framework Laravel. O nome é algo genérico pois a aplicação foi apenas para fins de estudo.",
             "source": "https://github.com/nixs-dev/AlinesStore",
-            "stacks": ["Laravel", "PHP", "JavaScript", "HTML", "CSS"],
+            "stacks": ["Laravel", "PHP", "MySQL", "JavaScript", "HTML", "CSS"],
             "logo": "logo.png",
             "screenshots": [
                 "1.jpg",
@@ -14,29 +14,35 @@
                 "4.jpg",
                 "5.jpg"
             ]
+        },
+        {
+            "id": 1,
+            "name": "MUSIC PLAYER",
+            "description": "PROJETO NÃO FINALIZADO. INFORMAÇÕES PASSíVEIS DE ALTERAÇÕES.\n\n Iniciado em: 26/01/2023\n Previsão de liberação: 15/04/2023",
+            "source": "",
+            "stacks": ["ExpressJS", "NodeJS", "ReactJS", "MySQL", "HTML", "SASS"],
+            "logo": "logo.png",
+            "screenshots": [
+            ]
         }
     ],
     "languages": {
         "js": {
             "name": "JavaScript",
-            "icon": "js_coin.png",
             "experience": "3 anos",
-            "level": "Intermediário",
-            "additional": "Tenho facilidade de lidar com JavaScript no ambiente do cliente. Sei trabalhar com AngularJS também, apesar de ter utilizado poucas vezes."
+            "level": "Intermediário"
         },
         "php": {
             "name": "PHP",
             "icon": "php_coin.png",
             "experience": "2 anos",
-            "level": "Intermediário",
-            "additional": "Tenho vários projetos utilizando php no meu GitHub. Essa é uma das linguagens que eu considero ter mais afinidade. Apesar do tempo de utilização. Gosto bastante de usar ela quando opto por não usar a linguagem python."
+            "level": "Intermediário"
         },
         "python": {
             "name": "Python",
             "icon": "python_coin.png",
             "experience": "4 anos",
-            "level": "Intermediário",
-            "additional": "Python é a linguagem que eu mais tive e ainda tenho contato. Ja fiz diversos tipos de aplicações utilizando essa linguagem. Devido a isso, considero ser essa a linguagem que eu mais tenho conhecimento a respeito. Desde desenvolvimento web e desktop, até mobile usando kivy."
+            "level": "Intermediário"
         }
     }
 }

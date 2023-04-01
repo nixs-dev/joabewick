@@ -10,27 +10,12 @@ var languagesData = {};
 
 
 window.onload = function () {
-    calculateVH();
     getProjects();
     getLanguages();
     body.style.animation = "fadeIn 2s forwards";
     setupTyping();
 };
 
-
-window.addEventListener('resize', calculateVH);
-window.addEventListener('orientationchange', calculateVH);
-
-document.querySelector("#language-description").addEventListener("animationend", () => {
-    document.querySelector("#language-description").classList.toggle("animate");
-});
-
-
-function calculateVH () {
-    let vh = window.innerHeight * 0.01; // VH FIX
-    
-    document.documentElement.style.setProperty("--vh", vh + 'px');
-}
 
 function setProjects(projects) {
     let list = document.querySelector("#projects-list");
@@ -52,28 +37,19 @@ function setProjects(projects) {
 }
 
 function setLanguages(languages) {
-    let list = document.querySelector("#languages-repr");
-    let template = document.querySelector("#language-coin-template");
+    let list = document.querySelector("#stacks-list");
+    let template = document.querySelector("#stack-template");
     let keys = Object.keys(languages).slice(0, 3);
     
     let languageID = 1;
     keys.forEach(function (k) {
-        let clone = template.content.cloneNode(true);
-        
-        clone.querySelector("img").id = k;
-        clone.querySelector("img").classList.add(`orbit-${languageID}`);
-        clone.querySelector("img").src = `/data/languages/${languages[k].icon}`;
-        
-        if (languageID % 2 == 0) {
-            clone.querySelector("img").parentNode.classList.add("reverse");
-        }
-        
-        clone.querySelector("img").addEventListener("animationend", () => {
-            document.querySelector(`.language-coin#${k}`).classList.toggle("animate");
-        });
-        
-        list.appendChild(clone);
+        let languageRepr = template.content.cloneNode(true).firstElementChild;
+        let text = `${ languages[k].name } \n ${ languages[k].experience } \n ${ languages[k].level }`;
+
+        list.appendChild(languageRepr);
         languagesData[k] = languages[k];
+
+        languageRepr.querySelector(".stack-info").innerText = text;
         
         languageID++;
     });
@@ -87,6 +63,8 @@ function showProjectInfo(projectID) {
     projectInfo.querySelector("#project-description").innerText = project.description;
     projectInfo.querySelector("#project-source").innerText = project.source;
     projectInfo.querySelector("#project-source").href = project.source;
+    projectInfo.querySelector("#project-screenshots").innerHTML = "";
+    projectInfo.querySelector("#project-stacks").innerHTML = "";
     
     project.stacks.forEach((s) => {
         let label = document.createElement("label");
@@ -144,12 +122,19 @@ function toggleMenu() {
 
 function selectSection(targetID, toggleM=true) {
     let target = document.querySelector(`#${targetID}`);
+
+    if(!target) {
+        return;
+    }
+
     let targetPosY = target.offsetTop;
     
     body.style.top = -1 * targetPosY + "px";
+
     if (toggleM) {
         toggleMenu();
     }
+
     startAnimationSection(target);
 }
 
@@ -198,8 +183,7 @@ function typingEffect(element, cursor) {
 
 function startAnimationSection(section) {
     switch (section.id) {
-        case "skills":
-            section.querySelector(".section-content > img").style.animation = "showInfoFromLeft 2s forwards";
-            section.querySelector(".section-content > div").style.animation = "showInfoFromRight 2s forwards";
+        default:
+            return;
     }
 }

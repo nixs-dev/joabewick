@@ -15,16 +15,16 @@ function getProjects () {
     request.send();
 }
 
-function getLanguages () {
+function getStacks () {
     let request = new XMLHttpRequest();
-    let languages;
+    let stacks;
     
     request.open("GET", dataURL, true);
     request.onreadystatechange = function () {
         if (request.readyState == 4) {
-            languages = JSON.parse(request.responseText).languages;
+            stacks = JSON.parse(request.responseText).stacks;
             
-            setLanguages(languages);
+            setStacks(stacks);
         }
     };
     request.send();

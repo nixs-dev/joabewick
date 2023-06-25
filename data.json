@@ -17,31 +17,73 @@
         },
         {
             "id": 1,
-            "name": "MUSIC PLAYER",
-            "description": "PROJETO NÃO FINALIZADO. INFORMAÇÕES PASSíVEIS DE ALTERAÇÕES.\n\n Iniciado em: 26/01/2023\n Previsão de liberação: 15/04/2023",
-            "source": "",
-            "stacks": ["ExpressJS", "NodeJS", "ReactJS", "MySQL", "HTML", "SASS"],
+            "name": "SayUP",
+            "description": "A idéia desse projeto que nomeei de 'SayUP' é uma plataforma com o objetivo de se fazer pesquisas e eventos científicos. Eu coloquei um serviço de criação e agendamento de eventos e um sistema de enquetes para critério de pesquisa. Defini diversas categorias, cada uma representando uma área do conhecimento. Essa parte de agendamento de eventos seria feito juntamente com a aplicação de moderação/administrador, a qual não desejo mostrar aqui, pelo simples fato de que não foi desenvolvida com o objetivo de ser publicada. Haveriam pedidos para realização de eventos e quem faria esse controle e liberação seriam os moderadores. O sistema de enquetes não tem nada de inovador, são enquetes, apenas.",
+            "source": "https://github.com/nixs-dev/SayUP",
+            "stacks": ["Django", "Python", "HTML", "CSS", "JS", "MySQL"],
             "logo": "logo.png",
             "screenshots": [
+                "1.gif",
+                "2.png",
+                "3.png",
+                "4.png",
+                "5.png",
+				"6.png"
+            ]
+        },
+		{
+            "id": 2,
+            "name": "VNet",
+            "description": "VNet é uma rede social que conta com recursos padrões de uma rede comum: publicações, curtidas, comentários, perfis e um bate-papo.",
+            "source": "https://github.com/nixs-dev/VNet",
+            "stacks": ["PHP", "Ratchet", "CSS", "HTML", "JS", "MySQL"],
+            "logo": "logo.png",
+            "screenshots": [
+                "1.png",
+                "2.png",
+                "3.png",
+                "4.png",
+                "5.png",
+				"6.png",
+				"7.png",
+				"8.png"
             ]
         }
     ],
-    "languages": {
+    "stacks": {
+        "html": {
+            "name": "HTML",
+            "experience": "3 anos",
+            "level": "Intermediário"
+        },
+        "CSS": {
+            "name": "CSS",
+            "experience": "3 anos",
+            "level": "Intermediário"
+        },
         "js": {
             "name": "JavaScript",
             "experience": "3 anos",
             "level": "Intermediário"
         },
-        "php": {
-            "name": "PHP",
-            "icon": "php_coin.png",
+        "nodejs": {
+            "name": "NodeJS",
             "experience": "2 anos",
             "level": "Intermediário"
         },
-        "python": {
-            "name": "Python",
-            "icon": "python_coin.png",
-            "experience": "4 anos",
+        "php": {
+            "name": "PHP",
+            "experience": "3 anos",
+            "level": "Intermediário"
+        },
+        "reactjs": {
+            "name": "ReactJS",
+            "experience": "1 ano",
+            "level": "Iniciante"
+        },
+        "mysql": {
+            "name": "MySQL",
+            "experience": "3 anos",
             "level": "Intermediário"
         }
     }

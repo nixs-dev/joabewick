@@ -6,12 +6,12 @@ const typingElements = document.querySelectorAll(".typing-effect");
 
 
 var projectsAvailable = {};
-var languagesData = {};
+var stacksData = {};
 
 
 window.onload = function () {
     getProjects();
-    getLanguages();
+    getStacks();
     body.style.animation = "fadeIn 2s forwards";
     setupTyping();
 };
@@ -36,22 +36,22 @@ function setProjects(projects) {
     });
 }
 
-function setLanguages(languages) {
+function setStacks(stacks) {
     let list = document.querySelector("#stacks-list");
     let template = document.querySelector("#stack-template");
-    let keys = Object.keys(languages).slice(0, 3);
+    let keys = Object.keys(stacks);
     
-    let languageID = 1;
+    let stackID = 1;
     keys.forEach(function (k) {
-        let languageRepr = template.content.cloneNode(true).firstElementChild;
-        let text = `${ languages[k].name } \n ${ languages[k].experience } \n ${ languages[k].level }`;
+        let stackRepr = template.content.cloneNode(true).firstElementChild;
+        let text = `${ stacks[k].name } \n ${ stacks[k].experience } \n ${ stacks[k].level }`;
 
-        list.appendChild(languageRepr);
-        languagesData[k] = languages[k];
+        list.appendChild(stackRepr);
+        stacksData[k] = stacks[k];
 
-        languageRepr.querySelector(".stack-info").innerText = text;
+        stackRepr.querySelector(".stack-info").innerText = text;
         
-        languageID++;
+        stackID++;
     });
 }
 
@@ -87,23 +87,6 @@ function showProjectInfo(projectID) {
 
 function hideProjectInfo() {
     projectInfo.style.display = "none";
-}
-
-function clickCoin(coin) {
-    const languageDescription = document.querySelector("#language-description");
-    const languageTitle = document.querySelector("#description-title");
-    const descriptionContent = document.querySelector("#description-content");
-    let data = languagesData[coin.id];
-    
-    languageDescription.style.display = "flex";
-    coin.classList.toggle("animate");
-
-    languageTitle.innerText = data.name;
-    descriptionContent.querySelector("#experience").lastElementChild.innerText = data.experience;
-    descriptionContent.querySelector("#level").lastElementChild.innerText = data.level;
-    descriptionContent.querySelector("#additional-info").innerText = data.additional;
-    
-    languageDescription.classList.toggle("animate");
 }
 
 function toggleMenu() {

@@ -2,23 +2,23 @@
     "projects": [
         {
             "id": 0,
-            "name": "Aline's store",
-            "description": "Um e-commerce integrado com a API do PagSeguro. Feito usando PHP com a framework Laravel. O nome é algo genérico pois a aplicação foi apenas para fins de estudo.",
-            "source": "https://github.com/nixs-dev/AlinesStore",
+            "name": "OnStyle",
+            "description": "Um e-commerce integrado com a API do PagSeguro feito usando PHP com a framework Laravel.",
+            "source": "https://github.com/nixs-dev/OnStyle",
             "stacks": ["Laravel", "PHP", "MySQL", "JavaScript", "HTML", "CSS"],
             "logo": "logo.png",
             "screenshots": [
-                "1.jpg",
-                "2.jpg",
-                "3.jpg",
-                "4.jpg",
-                "5.jpg"
+                "1.png",
+                "2.png",
+                "3.png",
+                "4.png",
+                "5.png"
             ]
         },
         {
             "id": 1,
             "name": "SayUP",
-            "description": "A idéia desse projeto que nomeei de 'SayUP' é uma plataforma com o objetivo de se fazer pesquisas e eventos científicos. Eu coloquei um serviço de criação e agendamento de eventos e um sistema de enquetes para critério de pesquisa. Defini diversas categorias, cada uma representando uma área do conhecimento. Essa parte de agendamento de eventos seria feito juntamente com a aplicação de moderação/administrador, a qual não desejo mostrar aqui, pelo simples fato de que não foi desenvolvida com o objetivo de ser publicada. Haveriam pedidos para realização de eventos e quem faria esse controle e liberação seriam os moderadores. O sistema de enquetes não tem nada de inovador, são enquetes, apenas.",
+            "description": "Uma plataforma com o objetivo de se fazer pesquisas e eventos científicos. Existe serviço de criação e agendamento de eventos e um sistema de enquetes para critério de pesquisa. O sistema possui diversas categorias, cada uma representando uma área do conhecimento. As pesquisas são feitas através de um sistema de enquetes.",
             "source": "https://github.com/nixs-dev/SayUP",
             "stacks": ["Django", "Python", "HTML", "CSS", "JS", "MySQL"],
             "logo": "logo.png",

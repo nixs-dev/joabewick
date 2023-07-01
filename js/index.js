@@ -1,4 +1,5 @@
-const body = document.querySelector("body");
+const pageContent = document.querySelector("body #page-content");
+const loader = document.querySelector("body #loader");
 const projectInfo = document.querySelector("#project-details");
 const skillsSection = document.getElementById("skills");
 const menu = document.querySelector("#main-menu");
@@ -10,9 +11,15 @@ var stacksData = {};
 
 
 window.onload = function () {
+    // Calling services
+
     getProjects();
     getStacks();
-    body.style.animation = "fadeIn 2s forwards";
+
+    // End data loading
+
+    loader.style.display = "none";
+    pageContent.style.animation = "fadeIn 2s forwards";
     setupTyping();
 };
 
@@ -112,7 +119,7 @@ function selectSection(targetID, toggleM=true) {
 
     let targetPosY = target.offsetTop;
     
-    body.style.top = -1 * targetPosY + "px";
+    pageContent.style.top = -1 * targetPosY + "px";
 
     if (toggleM) {
         toggleMenu();

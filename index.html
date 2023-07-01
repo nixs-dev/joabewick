@@ -31,162 +31,171 @@
         <script src="https://kit.fontawesome.com/17c066a4d1.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id="my-info">
-            <div id="description">
-                <label id="name" class="typing-effect">Joabe Wick</label>
-                <p id="resume">
-                    Olá! Me chamo Joabe Wick, um Desenvolvedor Fullstack apaixonado por tecnologia.
-                </p>
-                <button id="get-started" class="stone-button" onclick="toggleMenu()">Navegar</button>
-            </div>
-            <div id="photo-wrapper">
-            </div>
-            <div id="social-networks">
-                <button class="social-network linkedin-network" onclick="window.location = 'https://www.linkedin.com/in/joabe-wick-897a9420b'"></button>
-                <button class="social-network github-network" onclick="window.location = 'https://github.com/nixs-dev'"></button>
-                <button class="social-network instagram-network" onclick="window.location = 'https://www.instagram.com/joabewwick/'"></button>
-            </div>
-        </div>
-        <div class="section" id="about-me">
-            <div class="section-title">
-                Sobre mim
-            </div>
-            <div class="section-content">
-                <div id="info">
-                    <div id="my-bio">
-                        <p>
-                            Me chamo Joabe e tenho 20 anos. Sou formado como técnico em informática, mas meu foco de estudos ao longo do tempo se encaminhou para a área de sistemas
-                            e atualmente permaneço estudando sobre desenvolvimento web com o intuito de me aprimorar.
-                            Tenho trabalhado constantemente em projetos pessoais com a intenção de me desenvolver cada vez mais, tanto no Backend como Frontend. Ao longo desse website vocês poderão ver
-                            minhas habilidades em destaque e meus melhores projetos até o momento.
-                            Meu objetivo é me tornar um excelente Desenvolvedor Fullstack, capaz de entregar diversos tipos de aplicações web com eficiência e qualidade.
-                        </p>
-                    </div>
+        <div id="page-content">
+            <div id="my-info">
+                <div id="description">
+                    <label id="name" class="typing-effect">Joabe Wick</label>
+                    <p id="resume">
+                        Olá! Me chamo Joabe Wick, um Desenvolvedor Fullstack apaixonado por tecnologia.
+                    </p>
+                    <button id="get-started" class="stone-button" onclick="toggleMenu()">Navegar</button>
+                </div>
+                <div id="photo-wrapper">
+                </div>
+                <div id="social-networks">
+                    <button class="social-network linkedin-network" onclick="window.open('https://www.linkedin.com/in/joabe-wick-897a9420b', '_blank')"></button>
+                    <button class="social-network github-network" onclick="window.open('https://github.com/nixs-dev', '_blank')"></button>
+                    <button class="social-network instagram-network" onclick="window.open('https://www.instagram.com/joabewwick/', '_blank')"></button>
                 </div>
             </div>
-        </div>
-        <div class="section" id="skills">
-            <div class="section-title">
-                Habilidades
-            </div>
-            <div class="section-content">
-                <div id="skills-grid">
-                    <div class="skill">
-                        <i class="fa-solid fa-cube"></i>
-                        <label>POO</label>
-                    </div>
-                    <div class="skill">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <label>Desenvolvimento Fullstack</label>
-                    </div>
-                    <div class="skill">
-                        <i class="fa-solid fa-database"></i>
-                        <label>MySQL</label>
-                    </div>
-                    <div class="skill">
-                        <i class="fa-brands fa-github"></i>
-                        <label>Git</label>
-                    </div>
-                    <div class="skill">
-                        <i class="fa-solid fa-folder-tree"></i>
-                        <label>HTTP e REST</label>
-                    </div>
-                    <div class="skill">
-                        <i class="fa-solid fa-globe"></i>
-                        <label>Arquitetura MVC</label>
-                    </div>
+            <div class="section" id="about-me">
+                <div class="section-title">
+                    Sobre mim
                 </div>
-            </div>
-        </div>
-        <div class="section" id="stacks">
-            <div class="section-title">
-                Stacks
-            </div>
-            <div class="section-content">
-                <div id="stacks-list">
-                    <template id="stack-template">
-                        <div class="stack">
-                            <p class="stack-info"></p>
+                <div class="section-content">
+                    <div id="info">
+                        <div id="my-bio">
+                            <p>
+                                Me chamo Joabe e tenho 20 anos. Sou formado como técnico em informática, mas meu foco de estudos ao longo do tempo se encaminhou para a área de sistemas
+                                e atualmente permaneço estudando sobre desenvolvimento web com o intuito de me aprimorar.
+                                Tenho trabalhado constantemente em projetos pessoais com a intenção de me desenvolver cada vez mais, tanto no Backend como Frontend. Ao longo desse website vocês poderão ver
+                                minhas habilidades em destaque e meus melhores projetos até o momento.
+                                Meu objetivo é me tornar um excelente Desenvolvedor Fullstack, capaz de entregar diversos tipos de aplicações web com eficiência e qualidade.
+                            </p>
                         </div>
-                    </template>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="section" id="projects">
-            <div class="section-title">
-                <label>Projetos</label>
+            <div class="section" id="skills">
+                <div class="section-title">
+                    Habilidades
+                </div>
+                <div class="section-content">
+                    <div id="skills-grid">
+                        <div class="skill">
+                            <i class="fa-solid fa-cube"></i>
+                            <label>POO</label>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <label>Desenvolvimento Fullstack</label>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-solid fa-database"></i>
+                            <label>MySQL</label>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-github"></i>
+                            <label>Git</label>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-solid fa-folder-tree"></i>
+                            <label>HTTP e REST</label>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-solid fa-globe"></i>
+                            <label>Arquitetura MVC</label>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="section-content">
-                <div id="projects-list">
-                    <template id="project-template">
-                        <div class="project">
-                            <div class="project-logo">
-                                <img src="/img/not_set_project.jpg">
-                                
-                                <div class="project-info-link">
-                                    <button onclick="showProjectInfo(this.parentNode.id)">Ver mais</button>
+            <div class="section" id="stacks">
+                <div class="section-title">
+                    Stacks
+                </div>
+                <div class="section-content">
+                    <div id="stacks-list">
+                        <template id="stack-template">
+                            <div class="stack">
+                                <p class="stack-info"></p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="projects">
+                <div class="section-title">
+                    <label>Projetos</label>
+                </div>
+                <div class="section-content">
+                    <div id="projects-list">
+                        <template id="project-template">
+                            <div class="project">
+                                <div class="project-logo">
+                                    <img src="/img/not_set_project.jpg">
+                                    
+                                    <div class="project-info-link">
+                                        <button onclick="showProjectInfo(this.parentNode.id)">Ver mais</button>
+                                    </div>
                                 </div>
                             </div>
+                        </template>
+                    </div>
+                </div>
+                <div id="project-details">
+                    <div id="visual-info">
+                        <img id="logo" src="/img/not_set_project.jpg">
+                    </div>
+                    <div id="other-info">
+                        <div id="basic-info">
+                            <label id="project-title"></label>
+                            
+                            <label class="info-title">Descrição</label>
+                            <p id="project-description">
+                            </p>
+                            
+                            <label class="info-title">Código fonte</label>
+                            <a id="project-source" href="" target="_blank"></a>
+                            
+                            <label class="info-title">Stacks</label>
+                            <div id="project-stacks">
+                            </div>
                         </div>
-                    </template>
+                        <div id="project-screenshots">
+                        </div>
+                    </div>
+                    <a id="close" onclick="hideProjectInfo()"><i class="fas fa-times"></i></a>
                 </div>
             </div>
-            <div id="project-details">
-                <div id="visual-info">
-                    <img id="logo" src="/img/not_set_project.jpg">
+            <div id="main-menu">
+                <button id="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <ul id="menu-options">
+                    <li onclick="selectSection('my-info')">Início</li>
+                    <li onclick="selectSection('about-me')">Sobre mim</li>
+                    <li onclick="selectSection('skills')">Habilidades</li>
+                    <li onclick="selectSection('stacks')">Stacks</li>
+                    <li onclick="selectSection('projects')">Projetos</li>
+                    <li onclick="selectSection('footer')">Fim</li>
+                </ul>
+            </div>
+            <div id="footer">
+                <div id="footer-content">
+                    <img src="/img/footer_decoration.gif"/>
+                    <p>
+                        Agradeço a visita!
+                        Peço que acessem meu github para conhecer outros dos meus projetos.
+                        Vocês também pode estar entrando em contato comigo através das redes apresentadas no inicio.
+                    </p>
+
+                    <a href="#" onclick="selectSection('my-info', false)">Voltar ao início</a>
                 </div>
-                <div id="other-info">
-                    <div id="basic-info">
-                        <label id="project-title"></label>
-                        
-                        <label class="info-title">Descrição</label>
-                        <p id="project-description">
-                        </p>
-                        
-                        <label class="info-title">Código fonte</label>
-                        <a id="project-source" href="" target="_blank"></a>
-                        
-                        <label class="info-title">Stacks</label>
-                        <div id="project-stacks">
-                        </div>
-                    </div>
-                    <div id="project-screenshots">
-                    </div>
+                
+                <div id="copyright">
+                    <a id="credits" href="/credits.html">Créditos aos autores dos recursos</a>
+
+                    <label>&copy; nixs-dev. 2022</label>
                 </div>
-                <a id="close" onclick="hideProjectInfo()"><i class="fas fa-times"></i></a>
             </div>
         </div>
-        <div id="main-menu">
-            <button id="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-arrow-left"></i>
-            </button>
-            <ul id="menu-options">
-                <li onclick="selectSection('my-info')">Início</li>
-                <li onclick="selectSection('about-me')">Sobre mim</li>
-                <li onclick="selectSection('skills')">Habilidades</li>
-                <li onclick="selectSection('stacks')">Stacks</li>
-                <li onclick="selectSection('projects')">Projetos</li>
-                <li onclick="selectSection('footer')">Fim</li>
-            </ul>
-       </div>
-        <footer id="footer">
-            <div id="footer-content">
-                <img src="/img/footer_decoration.gif"/>
-                <p>
-                    Agradeço a visita!
-                    Peço que acessem meu github para conhecer outros dos meus projetos.
-                    Vocês também pode estar entrando em contato comigo através das redes apresentadas no inicio.
-                </p>
-
-                <a href="#" onclick="selectSection('my-info', false)">Voltar ao início</a>
+        <div id="loader">
+            <div id="spinner">
+                <div id="inner"></div>
             </div>
-            
-            <div id="copyright">
-                <a id="credits" href="/credits.html">Créditos aos autores dos recursos</a>
 
-                <label>&copy; nixs-dev. 2022</label>
-            </div>
-        </footer>
+            <span>Os recursos estão sendo carregados...</span>
+        </div>
         <script src="/js/index.js"></script>
         <script src="/js/services.js"></script>
         <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{'token': '7c15df7c1f284085a54084a2ffc54124'}"></script>

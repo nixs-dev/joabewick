@@ -4,13 +4,14 @@ const projectInfo = document.querySelector("#project-details");
 const skillsSection = document.getElementById("skills");
 const menu = document.querySelector("#main-menu");
 const typingElements = document.querySelectorAll(".typing-effect");
+var currentSection = "my-info";
 
 
 var projectsAvailable = {};
 var stacksData = {};
 
 
-window.onload = function () {
+window.onload = () => {
     // Calling services
 
     getProjects();
@@ -23,6 +24,10 @@ window.onload = function () {
     setupTyping();
 };
 
+window.onresize = () => {
+    selectSection(currentSection, false);
+    menu.style.right = -1 * menu.getBoundingClientRect().width + "px";
+}
 
 function setProjects(projects) {
     let list = document.querySelector("#projects-list");
@@ -126,6 +131,8 @@ function selectSection(targetID, toggleM=true) {
     }
 
     startAnimationSection(target);
+
+    currentSection = targetID;
 }
 
 function setupTyping() {

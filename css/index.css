@@ -1,5 +1,5 @@
-@import url("/css/animations.css");
-@import url("/css/fonts.css");
+@import url("css/animations.css");
+@import url("css/fonts.css");
 
 
 * {
@@ -133,7 +133,7 @@ MAIN
     align-items: center;
     z-index: 0;
     
-    background-image: url("/img/description_background.jpg");
+    background-image: url("img/description_background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -213,16 +213,16 @@ MAIN
 }
 
 .linkedin-network {
-    background-image: url("/img/linkedin_icon.jpeg");
+    background-image: url("img/linkedin_icon.jpeg");
 }
 
 .github-network {
     background-color: black;
-    background-image: url("/img/github_icon.png");
+    background-image: url("img/github_icon.png");
 }
 
 .instagram-network {
-    background-image: url("/img/instagram_icon.png");
+    background-image: url("img/instagram_icon.png");
 }
 
 #photo-wrapper {
@@ -230,7 +230,7 @@ MAIN
     justify-content: center;
     align-items: center;
 
-    background: url("/img/me.jpg");
+    background: url("img/me.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -246,7 +246,7 @@ MAIN
 */
 
 #about-me {
-    background-image: url("/img/about_me_background.jpg");
+    background-image: url("img/about_me_background.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -282,7 +282,7 @@ MAIN
 */
 
 #skills {
-    background-image: url("/img/skills_background.jpg");
+    background-image: url("img/skills_background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -344,7 +344,7 @@ MAIN
 #stacks {
     position: relative;
 
-    background-image: url("/img/stacks_background.jpg");
+    background-image: url("img/stacks_background.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -417,7 +417,7 @@ MAIN
 #projects {
     position: relative;
     
-    background-image: url("/img/projects_background.jpg");
+    background-image: url("img/projects_background.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -508,7 +508,7 @@ MAIN
     
     width: 100%;
     height: 100%;
-    background: url("/img/project_moldure.png");
+    background: url("img/project_moldure.png");
     background-position: center center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -687,7 +687,7 @@ MAIN
     width: 100dvw;
     height: 100dvh;
 
-    background-image: url("/img/footer_background.jpg");
+    background-image: url("img/footer_background.jpg");
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -780,7 +780,7 @@ MAIN
     transform: translateX(-100%);
     
     background-color: transparent;
-    background-image: url("/img/main_menu_toggle.png");
+    background-image: url("img/main_menu_toggle.png");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;

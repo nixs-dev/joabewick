@@ -1,4 +1,4 @@
-var dataURL = "data.json";
+var dataURL = "../data.json";
 
 function getProjects () {
     let request = new XMLHttpRequest();

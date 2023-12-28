@@ -38,7 +38,7 @@ function setProjects(projects) {
         let clone = template.content.cloneNode(true);
         
         if (p.logo) {
-            clone.querySelector(".project-logo img").src = `/data/projects/${p.id}/${p.logo}`;
+            clone.querySelector(".project-logo img").src = `data/projects/${p.id}/${p.logo}`;
         }
         
         clone.querySelector(".project-info-link").id = `project-${p.id}`;
@@ -87,13 +87,13 @@ function showProjectInfo(projectID) {
     
     project.screenshots.forEach((s) => {
         let img = document.createElement("img");
-        img.src = `/data/projects/${project.id}/${s}`;
+        img.src = `data/projects/${project.id}/${s}`;
         
         projectInfo.querySelector("#project-screenshots").appendChild(img);
     });
     
     if (project.logo) {
-        projectInfo.querySelector("#logo").src = `/data/projects/${project.id}/${project.logo}`;
+        projectInfo.querySelector("#logo").src = `data/projects/${project.id}/${project.logo}`;
     }
 }
 

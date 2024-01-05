@@ -73,8 +73,9 @@ function showProjectInfo(projectID) {
     projectInfo.style.display = "flex";
     projectInfo.querySelector("#project-title").innerText = project.name;
     projectInfo.querySelector("#project-description").innerText = project.description;
-    projectInfo.querySelector("#project-source").innerText = project.source;
+    projectInfo.querySelector("#project-source").innerText = project.source === "#" ? "Código fonte privado" : project.source;
     projectInfo.querySelector("#project-source").href = project.source;
+    projectInfo.querySelector("#project-source").style.pointerEvents = project.source === "#" ? "none" : "auto";
     projectInfo.querySelector("#project-screenshots").innerHTML = "";
     projectInfo.querySelector("#project-stacks").innerHTML = "";
     

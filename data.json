@@ -35,7 +35,7 @@
             "id": 2,
             "name": "VNet",
             "description": "VNet é uma rede social que conta com recursos padrões de uma rede comum: publicações, curtidas, comentários, perfis e um bate-papo.",
-            "source": "https://github.com/nixs-dev/VNet",
+            "source": "#",
             "stacks": ["PHP", "Ratchet", "CSS", "HTML", "JS", "MySQL"],
             "logo": "logo.png",
             "screenshots": [

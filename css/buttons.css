@@ -18,3 +18,16 @@
     border: 0.09rem solid white;
     color: black;
 }
+
+@media only screen and (min-width: 1920px)  {
+    .stone-button {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+        
+        padding: 0.5rem;
+    }
+    
+    .stone-button:hover {
+        border: 1.2rem solid white;
+    }
+}

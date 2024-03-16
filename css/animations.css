@@ -27,3 +27,10 @@
         box-shadow: 0 0 6rem 2.5rem #000;
     }
 }
+
+@keyframes l8 {
+    0%,10%   {border-radius:0}
+    30%,40%  {border-radius:50% 0}
+    60%,70%  {border-radius:50%}
+    90%,100% {border-radius:0 50%}
+}

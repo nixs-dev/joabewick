@@ -94,8 +94,8 @@ h1 {
     font-size: 1rem;
     
     text-decoration: underline;
-    text-decoration-color: #66c2ff;
-	-webkit-text-decoration-color: #66c2ff;
+    text-decoration-color: #747474;
+	-webkit-text-decoration-color: #747474;
 }
 
 .resource .inner a:hover {
@@ -106,5 +106,9 @@ h1 {
     #resources {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .resource {
+        width: 100%;
     }
 }

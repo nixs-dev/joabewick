@@ -24,42 +24,65 @@
         <!-- Meta Tags Generated via https://www.opengraph.xyz -->
         
         <link rel="icon" type="image/png" href="favicon.ico"/>
-        <link rel="stylesheet" href="css/buttons.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/quick_style.css">
         
         <script src="https://kit.fontawesome.com/17c066a4d1.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id="page-content">
+        <div id="loader">
+            <div></div>
+
+            <span>Os recursos estão sendo carregados...</span>
+        </div>
+        <header>
+            <div id="header-logo"></div>
+            <nav id="main-menu">
+                <ul id="menu-options">
+                    <li><a href="#my-info">Inicio</a></li>
+                    <li><a href="#about-me">Sobre mim</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#stacks">Tecnologias</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="page-content">
             <div id="my-info">
                 <div id="description">
                     <label id="name" class="typing-effect">Joabe Wick</label>
                     <p id="resume">
                         Olá! Me chamo Joabe Wick, um Desenvolvedor Fullstack apaixonado por tecnologia.
                     </p>
-                    <button id="get-started" class="stone-button" onclick="toggleMenu()">Navegar</button>
                 </div>
-                <div id="photo-wrapper">
+                <div id="picture-wrapper">
                 </div>
                 <div id="social-networks">
                     <button class="social-network linkedin-network" onclick="window.open('https://www.linkedin.com/in/joabe-wick-897a9420b', '_blank')"></button>
                     <button class="social-network github-network" onclick="window.open('https://github.com/nixs-dev', '_blank')"></button>
                     <button class="social-network instagram-network" onclick="window.open('https://www.instagram.com/joabewwick/', '_blank')"></button>
                 </div>
+
+                <div class="fadding-bottom"></div>
             </div>
             <div class="section" id="about-me">
                 <div class="section-title">
                     Sobre mim
                 </div>
                 <div class="section-content">
+                    <div id="about-me-picture">
+                    </div>
                     <div id="info">
                         <div id="my-bio">
                             <p>
-                                Me chamo Joabe e tenho 20 anos. Sou formado como técnico em informática, mas meu foco de estudos ao longo do tempo se encaminhou para a área de sistemas
-                                e atualmente permaneço estudando sobre desenvolvimento web com o intuito de me aprimorar.
-                                Tenho trabalhado constantemente em projetos pessoais com a intenção de me desenvolver cada vez mais, tanto no Backend como Frontend. Ao longo desse website vocês poderão ver
+                                Me chamo Joabe e tenho 20 anos. Sou formado como técnico em informática, mas meu foco de estudos ao longo do tempo se encaminhou para a área de sistemas. Atualmente curso Tecnólogo em Análise e
+                                Desenvolvimento de Sistemas pela PUC Minas.
+                            </p>
+                            <p>
+                                Venho trabalhando constantemente em projetos pessoais com a intenção de me desenvolver cada vez mais, tanto no Backend como no Frontend. Ao longo desse website vocês poderão ver
                                 minhas habilidades em destaque e meus melhores projetos até o momento.
+                            </p>
+                            <p>
                                 Meu objetivo é me tornar um excelente Desenvolvedor Fullstack, capaz de entregar diversos tipos de aplicações web com eficiência e qualidade.
                             </p>
                         </div>
@@ -101,13 +124,20 @@
             </div>
             <div class="section" id="stacks">
                 <div class="section-title">
-                    Stacks
+                    Tecnologias
                 </div>
                 <div class="section-content">
                     <div id="stacks-list">
                         <template id="stack-template">
                             <div class="stack">
-                                <p class="stack-info"></p>
+                                <div class="stack-info">
+                                    <template id="stack-info-template">
+                                        <div class="info">
+                                            <i></i>
+                                            <span></span>
+                                        </div>
+                                    </template>
+                                </div>
                             </div>
                         </template>
                     </div>
@@ -115,7 +145,7 @@
             </div>
             <div class="section" id="projects">
                 <div class="section-title">
-                    <label>Projetos</label>
+                    Projetos
                 </div>
                 <div class="section-content">
                     <div id="projects-list">
@@ -123,10 +153,9 @@
                             <div class="project">
                                 <div class="project-logo">
                                     <img src="img/not_set_project.jpg">
-                                    
-                                    <div class="project-info-link">
-                                        <button onclick="showProjectInfo(this.parentNode.id)">Ver mais</button>
-                                    </div>
+                                </div>
+                                <div class="project-info-link">
+                                    <button onclick="showProjectInfo(this.parentNode.id)">Ver mais</button>
                                 </div>
                             </div>
                         </template>
@@ -157,45 +186,39 @@
                     <a id="close" onclick="hideProjectInfo()"><i class="fas fa-times"></i></a>
                 </div>
             </div>
-            <div id="main-menu">
-                <button id="menu-toggle" onclick="toggleMenu()">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-                <ul id="menu-options">
-                    <li onclick="selectSection('my-info')">Início</li>
-                    <li onclick="selectSection('about-me')">Sobre mim</li>
-                    <li onclick="selectSection('skills')">Habilidades</li>
-                    <li onclick="selectSection('stacks')">Stacks</li>
-                    <li onclick="selectSection('projects')">Projetos</li>
-                    <li onclick="selectSection('footer')">Fim</li>
+
+            <aside id="side-menu">
+                <ul id="side-menu-options">
+                    <li><a href="#my-info">Inicio</a></li>
+                    <li><a href="#about-me">Sobre mim</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#stacks">Tecnologias</a></li>
+                    <li><a href="#projects">Projetos</a></li>
                 </ul>
-            </div>
-            <div id="footer">
-                <div id="footer-content">
-                    <img src="img/footer_decoration.gif"/>
-                    <p>
-                        Agradeço a visita!
-                        Peço que acessem meu github para conhecer outros dos meus projetos.
-                        Vocês também pode estar entrando em contato comigo através das redes apresentadas no inicio.
-                    </p>
+            </aside>
+        </main>
+        <footer id="footer">
+            <div class="fadding-top"></div>
 
-                    <a href="#" onclick="selectSection('my-info', false)">Voltar ao início</a>
-                </div>
-                
-                <div id="copyright">
-                    <a id="credits" href="/credits.html">Créditos aos autores dos recursos</a>
+            <div id="footer-content">
+                <img src="img/drawing_logo.png"/>
+                <p>
+                    Seguindo em frente, aprendendo e transformando desafios em oportunidades diárias.
+                </p>
 
-                    <label>&copy; nixs-dev. 2022</label>
+                <div id="footer-social-networks">
+                    <button class="footer-social-network" onclick="window.open('https://www.linkedin.com/in/joabe-wick-897a9420b', '_blank')"><i class="fa-brands fa-linkedin-in"></i></button>
+                    <button class="footer-social-network" onclick="window.open('https://github.com/nixs-dev', '_blank')"><i class="fa-brands fa-github"></i></button>
+                    <button class="footer-social-network" onclick="window.open('https://www.instagram.com/joabewwick/', '_blank')"><i class="fa-brands fa-instagram"></i></button>
                 </div>
             </div>
-        </div>
-        <div id="loader">
-            <div id="spinner">
-                <div id="inner"></div>
-            </div>
+            
+            <div id="copyright">
+                <a id="credits" href="/credits.html">Créditos aos autores dos recursos</a>
 
-            <span>Os recursos estão sendo carregados...</span>
-        </div>
+                <label>&copy; nixs-dev. 2024</label>
+            </div>
+        </footer>
         <script src="js/index.js"></script>
         <script src="js/services.js"></script>
     </body>

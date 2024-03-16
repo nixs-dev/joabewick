@@ -2,9 +2,11 @@ const pageContent = document.querySelector("body #page-content");
 const loader = document.querySelector("body #loader");
 const projectInfo = document.querySelector("#project-details");
 const skillsSection = document.getElementById("skills");
-const menu = document.querySelector("#main-menu");
+const menu = document.querySelector("#side-menu");
 const typingElements = document.querySelectorAll(".typing-effect");
-var currentSection = "my-info";
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
 
 
 var projectsAvailable = {};
@@ -19,15 +21,19 @@ window.onload = () => {
 
     // End data loading
 
-    loader.style.display = "none";
-    pageContent.style.animation = "fadeIn 2s forwards";
-    setupTyping();
+    
+    setTimeout(() => {
+        loader.style.display = "none";
+        main.style.animation = "fadeIn 2s forwards";
+        header.style.animation = "fadeIn 1s forwards";
+        footer.style.animation = "fadeIn 2s forwards";
+        document.body.style.overflowY = "auto";
+
+        document.querySelector("#header-logo").addEventListener("click", () => toggleMenu());
+        setupTyping();
+    }, 2000);
 };
 
-window.onresize = () => {
-    selectSection(currentSection, false);
-    menu.style.right = -1 * menu.getBoundingClientRect().width + "px";
-}
 
 function setProjects(projects) {
     let list = document.querySelector("#projects-list");
@@ -48,20 +54,40 @@ function setProjects(projects) {
     });
 }
 
+function toggleMenu() {
+    let width = menu.getBoundingClientRect().width;
+    
+    if(getComputedStyle(menu).right == "0px") {
+        menu.style.right = -1 * width + "px";
+    }
+    else {
+        menu.style.right = 0;
+    }
+}
+
 function setStacks(stacks) {
-    let list = document.querySelector("#stacks-list");
     let template = document.querySelector("#stack-template");
+    let infoTemplate = template.content.cloneNode(true).querySelector("#stack-info-template");
     let keys = Object.keys(stacks);
     
     let stackID = 1;
     keys.forEach(function (k) {
         let stackRepr = template.content.cloneNode(true).firstElementChild;
-        let text = `${ stacks[k].name } \n ${ stacks[k].experience } \n ${ stacks[k].level }`;
+        let infoList = [ stacks[k].name, stacks[k].experience, stacks[k].level ];
+        let iconList = ["fa-solid fa-code", "fa-regular fa-clock", "fa-solid fa-graduation-cap"];
 
-        list.appendChild(stackRepr);
+        for(let i = 0; i < 3; i++) {
+            let infoRepr = infoTemplate.content.cloneNode(true).firstElementChild;
+
+            infoRepr.querySelector("span").innerText = infoList[i];
+            infoRepr.querySelector("i").className = iconList[i];
+
+            stackRepr.querySelector(".stack-info").appendChild(infoRepr);
+        }
+
         stacksData[k] = stacks[k];
 
-        stackRepr.querySelector(".stack-info").innerText = text;
+        document.querySelector("#stacks-list").appendChild(stackRepr);
         
         stackID++;
     });
@@ -70,6 +96,7 @@ function setStacks(stacks) {
 function showProjectInfo(projectID) {
     let project = projectsAvailable[projectID];
     
+    document.body.style.overflowY = "hidden";
     projectInfo.style.display = "flex";
     projectInfo.querySelector("#project-title").innerText = project.name;
     projectInfo.querySelector("#project-description").innerText = project.description;
@@ -100,40 +127,7 @@ function showProjectInfo(projectID) {
 
 function hideProjectInfo() {
     projectInfo.style.display = "none";
-}
-
-function toggleMenu() {
-    let width = menu.getBoundingClientRect().width;
-    
-    if(getComputedStyle(menu).right == "0px") {
-        menu.style.right = -1 * width + "px";
-    }
-    else {
-        menu.style.right = 0;
-    }
-    
-    menu.querySelector("#menu-toggle").querySelector("i").classList.toggle("fa-arrow-left");
-    menu.querySelector("#menu-toggle").querySelector("i").classList.toggle("fa-arrow-right");
-}
-
-function selectSection(targetID, toggleM=true) {
-    let target = document.querySelector(`#${targetID}`);
-
-    if(!target) {
-        return;
-    }
-
-    let targetPosY = target.offsetTop;
-    
-    pageContent.style.top = -1 * targetPosY + "px";
-
-    if (toggleM) {
-        toggleMenu();
-    }
-
-    startAnimationSection(target);
-
-    currentSection = targetID;
+    document.body.style.overflowY = "auto";
 }
 
 function setupTyping() {

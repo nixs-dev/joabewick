@@ -1147,7 +1147,7 @@ footer #copyright a {
     }
 
     #main-menu #menu-options {
-        font-size: 3.5rem;
+        font-size: 1.5rem;
         backdrop-filter: blur(2px);
         padding-left: 1rem;
     }
@@ -1169,6 +1169,18 @@ footer #copyright a {
         font-size: 1.5rem;
     }
 
+    #stacks .section-content #stacks-list {
+        height: 60dvh;
+    }
+
+    #stacks .section-content #stacks-list .stack {
+        padding: 0.6rem 0.5rem;
+    }
+
+    #stacks .section-content #stacks-list .stack .stack-info {
+        font-size: 1.5rem;
+    }
+
     footer {
         position: relative;
         display: flex;
@@ -1186,20 +1198,17 @@ footer #copyright a {
     }
     
     footer #footer-content {
-        font-size: 1.5rem;
-    
         padding: 10rem 10rem;
         text-align: center;
     }
     
     footer #footer-content > p {
         width: 80%;
-    
-        text-align: justify;
+        font-size: 1.75rem;
     }
     
     footer #footer-content > img { 
-        width: 7rem;
+        width: 15rem;
         height: auto;
     }
     

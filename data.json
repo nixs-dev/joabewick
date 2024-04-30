@@ -33,24 +33,6 @@
         },
 		{
             "id": 2,
-            "name": "VNet",
-            "description": "VNet é uma rede social que conta com recursos padrões de uma rede comum: publicações, curtidas, comentários, perfis e um bate-papo.",
-            "source": "#",
-            "stacks": ["PHP", "Ratchet", "CSS", "HTML", "JS", "MySQL"],
-            "logo": "logo.png",
-            "screenshots": [
-                "1.png",
-                "2.png",
-                "3.png",
-                "4.png",
-                "5.png",
-				"6.png",
-				"7.png",
-				"8.png"
-            ]
-        },
-		{
-            "id": 3,
             "name": "Clematis Player",
             "description": "Clematis é uma plataforma de compartilhamento de músicas. O usuário cria uma conta, cria uma playlist e faz upload de qualquer música que ele tenha em disco. Nisso, essa música ficará disponível online, indexada aquela playlist. Desta forma, o mesmo pode enviar um link para que as pessoas acessem a playlist. Quem tiver acesso à playlist pode inclusive fazer download das faixas contidas nela, as quais foram enviadas pelo usuário anteriormente, ou até mesmo ouvir online. O criador pode fazer a edição da playlist e suas informações à qualquer momento. Ao enviar músicas para uma playlist, Os metadados(título, faixa, capa, album...) são extraídos para exibição no player.",
             "source": "https://github.com/nixs-dev/ClematisPlayer",

@@ -27,5 +27,6 @@ function getStacks () {
             setStacks(stacks);
         }
     };
+    
     request.send();
 }
